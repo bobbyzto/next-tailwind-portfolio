@@ -6,7 +6,10 @@ import {
   AiFillYoutube,
 } from "react-icons/ai";
 import Image from "next/image";
-import deved from "../../public/dev-ed-wave.png"
+import deved from "../../public/dev-ed-wave.png";
+import design from "../../public/design.png"
+import code from "../../public/code.png"
+import consulting from "../../public/consulting.png"
 
 export default function Home() {
   return (
@@ -59,8 +62,41 @@ export default function Home() {
           </div>
 
           {/* 3d image */}
+          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden">
+            <Image src={deved} alt={"deved"} fill={true} objectFit="cover" />
+          </div>
+        </section>
+
+        {/*  */}
+        <section>
           <div>
-            <Image src={deved} alt={"deved"}/>
+            <h3 className="text-3xl py-1">Services I offer</h3>
+            <p className="text-md py-2 leading-8 text-gray-800">
+              Lorem ipsum dolor sit amet. Qui porro pariatur qui commodi
+              aspernatur qui amet <span className="text-teal-500">quaerat</span>{" "}
+              et repellat culpa. Ut asperiores similique et aliquid asperiores
+              qui inventore voluptatem!
+            </p>
+            <p className="text-md py-2 leading-8 text-gray-800">
+              Lorem ipsum dolor sit amet. Qui porro pariatur qui commodi
+              aspernatur qui amet <span className="text-teal-500">quaerat</span>{" "}
+              et repellat culpa. Ut asperiores similique et aliquid asperiores
+              qui inventore voluptatem!
+            </p>
+          </div>
+          <div>
+            <div>
+              <Image src={design} width={100} height={100} alt={"card"} />
+              <h3 className="text-lg font-medium pt-8 pb-2">Beautiful Designs</h3>
+              <p className="py-2">
+                Creating elegant designs suited for your needs following core
+                design theory.
+              </p>
+              <h4 className="py-4 text-teal-600">Design tools I use</h4>
+              <p className="text-gray-800 py-1">Figma</p>
+              <p className="text-gray-800 py-1">Blender</p>
+              <p className="text-gray-800 py-1">Three.js</p>
+            </div>
           </div>
         </section>
       </main>
