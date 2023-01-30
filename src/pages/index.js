@@ -1,22 +1,16 @@
 import Head from "next/head";
 import { BsFillMoonStarsFill, BsGithub } from "react-icons/bs";
-import {
-  AiFillTwitterCircle,
-  AiFillLinkedin,
-  AiFillYoutube,
-} from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
 import Image from "next/legacy/image";
 import Link from "next/link";
-import deved from "../../public/dev-ed-wave.png";
+import bobby from "../../public/bobby.png";
 import design from "../../public/design.png";
 import code from "../../public/code.png";
-import consulting from "../../public/consulting.png";
-import web1 from "../../public/web1.png";
-import web2 from "../../public/web2.png";
-import web3 from "../../public/web3.png";
-import web4 from "../../public/web4.png";
-import web5 from "../../public/web5.png";
-import web6 from "../../public/web6.png";
+import learn from "../../public/learn.png";
+import movies from "../../public/we-love-movies.png";
+import reservations from "../../public/reservations-app.png";
+import recipes from "../../public/recipes-app.png";
+import library from "../../public/local-library.png";
 import { useState } from "react";
 
 export default function Home() {
@@ -39,6 +33,8 @@ export default function Home() {
               <a
                 href="https://www.github.com/bobbyzto"
                 className="flex hover:text-teal-500 dark:text-white dark:hover:text-teal-500"
+                target="_blank"
+                rel="noreferrer"
               >
                 <BsGithub />
                 /bobbyzto
@@ -72,12 +68,11 @@ export default function Home() {
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 md:text-xl  max-w-lg mx-auto dark:text-gray-300">
               Full-stack software engineer providing services for programming
-              and UI/UX for web app needs. Join me down below and let&#39;s work
-              together!
+              and UI/UX for your organization&#39;s web app needs. Connect with
+              me on LinkedIn down below and let&#39;s work together!
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-            <AiFillTwitterCircle />
             <a
               href="https://www.linkedin.com/in/robertweche/"
               target="_blank"
@@ -85,15 +80,14 @@ export default function Home() {
             >
               <AiFillLinkedin className="hover:text-teal-500" />
             </a>
-            <AiFillYoutube />
           </div>
 
-          {/* 3d image */}
+          {/* Profile image */}
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
             <Image
-              src={deved}
+              src={bobby}
               alt={"deved"}
-              fill={true}
+              fill="true"
               style={{ objectFit: "cover" }}
             />
           </div>
@@ -101,46 +95,42 @@ export default function Home() {
 
         {/* Services Offered */}
         <section>
-          <div>
+          <div className="pt-6">
             <h3 className="text-3xl py-1 dark:text-gray-100">
               My journey to full-stack
             </h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
-              Lorem ipsum dolor sit amet. Qui porro pariatur qui commodi
-              aspernatur qui amet <span className="text-teal-500">quaerat</span>{" "}
-              et repellat culpa. Ut asperiores similique et aliquid asperiores
-              qui inventore voluptatem!
+              I began learning computer programming near the end of 2021 in{" "}
+              <span className="text-teal-500">Python</span> with{" "}
+              <span className="text-teal-500">FreeCodeCamp</span> and{" "}
+              <span className="text-teal-500">PY4E</span>. I made basic
+              automation scripts, web-scrapers, web-crawlers, and interacted
+              with APIs. I loved discovering the power of code on my own, but I
+              wanted a more immersive learning experience with the aid of
+              professional developers.
             </p>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
-              Lorem ipsum dolor sit amet. Qui porro pariatur qui commodi
-              aspernatur qui amet <span className="text-teal-500">quaerat</span>{" "}
-              et repellat culpa. Ut asperiores similique et aliquid asperiores
-              qui inventore voluptatem!
+              In mid-2022, I signed up for the Software Engineering Immersion
+              course at <span className="text-teal-500">Thinkful</span>. Over
+              the course of 6 months, I learned modern web development using{" "}
+              <span className="text-teal-500">HTML5</span>,{" "}
+              <span className="text-teal-500">CSS3</span>, client-side
+              programming with <span className="text-teal-500">JavaScript</span>
+              , <span className="text-teal-500">ReactJS</span>,{" "}
+              <span className="text-teal-500">Bootstrap</span>, and server-side
+              programming with <span className="text-teal-500">NodeJS</span>,{" "}
+              <span className="text-teal-500">Express.js</span>,{" "}
+              <span className="text-teal-500">PostgreSQL</span>, and applied
+              best practices along the way by building projects{" "}
+              <Link className="hover:text-teal-500" href="#portfolio">
+                (see below)
+              </Link>
+              .
             </p>
           </div>
 
           {/* Cards */}
           <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-100">
-              <Image
-                src={code}
-                width={100}
-                height={100}
-                alt={"code card"}
-                className="mx-auto"
-              />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
-              <p className="py-2">
-                Creating elegant designs suited for your needs following core
-                design theory.
-              </p>
-              <h4 className="py-4 text-teal-600">Design tools I use</h4>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Blender</p>
-              <p className="text-gray-800 py-1">Three.js</p>
-            </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-100">
               <Image
                 src={design}
@@ -156,57 +146,72 @@ export default function Home() {
                 Creating elegant designs suited for your needs following core
                 design theory.
               </p>
-              <h4 className="py-4 text-teal-600">Design tools I use</h4>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Blender</p>
-              <p className="text-gray-800 py-1">Three.js</p>
+              <h4 className="py-4 text-teal-600">Frameworks I use</h4>
+              <p className="text-gray-800 py-1">ReactJS</p>
+              <p className="text-gray-800 py-1">TailwindCSS</p>
+              <p className="text-gray-800 py-1">Bootstrap</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-100">
               <Image
-                src={consulting}
+                src={code}
                 width={100}
                 height={100}
-                alt={"consulting card"}
+                alt={"code card"}
                 className="mx-auto"
               />
               <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
+                Functional Programs
               </h3>
               <p className="py-2">
-                Creating elegant designs suited for your needs following core
-                design theory.
+                Building web applications with a focus on functionality,
+                code readability, and reusability.
               </p>
-              <h4 className="py-4 text-teal-600">Design tools I use</h4>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Blender</p>
-              <p className="text-gray-800 py-1">Three.js</p>
+              <h4 className="py-4 text-teal-600">Languages I use</h4>
+              <p className="text-gray-800 py-1">JavaScript</p>
+              <p className="text-gray-800 py-1">HTML/CSS</p>
+              <p className="text-gray-800 py-1">Python</p>
+            </div>
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-100">
+              <Image
+                src={learn}
+                width={100}
+                height={100}
+                alt={"learn card"}
+                className="mx-auto"
+              />
+              <h3 className="text-lg font-medium pt-8 pb-2">
+                Continued Education
+              </h3>
+              <p className="py-2">
+                Learning how to code opened a whole new world of technological
+                curiosity for me.
+              </p>
+              <h4 className="py-4 text-teal-600">
+                What I study in my free time
+              </h4>
+              <p className="text-gray-800 py-1">C/C++</p>
+              <p className="text-gray-800 py-1">Java</p>
+              <p className="text-gray-800 py-1">OpenGL</p>
             </div>
           </div>
         </section>
 
         {/* Portfolio */}
-        <section>
+        <section id="portfolio">
           <div>
             <h3 className="text-3xl py-1 dark:text-gray-100">Portfolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
-              Lorem ipsum dolor sit amet. Qui porro pariatur qui commodi
-              aspernatur qui amet <span className="text-teal-500">quaerat</span>{" "}
-              et repellat culpa. Ut asperiores similique et aliquid asperiores
-              qui inventore voluptatem!
-            </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
-              Lorem ipsum dolor sit amet. Qui porro pariatur qui commodi
-              aspernatur qui amet <span className="text-teal-500">quaerat</span>{" "}
-              et repellat culpa. Ut asperiores similique et aliquid asperiores
-              qui inventore voluptatem!
+              These are a few of the projects I completed during my time at{" "}
+              <span className="text-teal-500">Thinkful</span>. Please have a
+              look!
             </p>
           </div>
 
           {/* Project Screencaps */}
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/3 flex-1 shadow-md rounded-lg">
               <Image
-                src={web1}
+                src={movies}
                 alt=""
                 className="rounded-lg object-cover"
                 width={"100&"}
@@ -214,9 +219,9 @@ export default function Home() {
                 layout="responsive"
               />
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/3 flex-1 shadow-md rounded-lg">
               <Image
-                src={web2}
+                src={reservations}
                 alt=""
                 className="rounded-lg object-cover"
                 width={"100&"}
@@ -224,9 +229,9 @@ export default function Home() {
                 layout="responsive"
               />
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/3 flex-1 shadow-md rounded-lg">
               <Image
-                src={web3}
+                src={recipes}
                 alt=""
                 className="rounded-lg object-cover"
                 width={"100&"}
@@ -234,29 +239,9 @@ export default function Home() {
                 layout="responsive"
               />
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/3 flex-1 shadow-md rounded-lg">
               <Image
-                src={web4}
-                alt=""
-                className="rounded-lg object-cover"
-                width={"100&"}
-                height={"100%"}
-                layout="responsive"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={web5}
-                alt=""
-                className="rounded-lg object-cover"
-                width={"100&"}
-                height={"100%"}
-                layout="responsive"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={web6}
+                src={library}
                 alt=""
                 className="rounded-lg object-cover"
                 width={"100&"}
