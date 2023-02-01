@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { BsFillMoonStarsFill, BsGithub } from "react-icons/bs";
+import { BsFillMoonStarsFill, BsFillSunFill, BsGithub } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
 import Image from "next/legacy/image";
 import Link from "next/link";
@@ -32,7 +32,8 @@ export default function Home() {
             <h1 className="flex text-xl font-burtons">
               <a
                 href="https://www.github.com/bobbyzto"
-                className="flex hover:text-teal-500 dark:text-white dark:hover:text-teal-500"
+                title="Visit my GitHub"
+                className="flex  dark:text-white hover:text-teal-500 dark:hover:text-teal-500 transform transition duration-500 hover:scale-105"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -42,18 +43,29 @@ export default function Home() {
             </h1>
             <ul className="flex items-center">
               <li>
-                <BsFillMoonStarsFill
-                  onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-2xl dark:text-gray-100"
-                />
+                {darkMode ? (
+                  <BsFillSunFill
+                    title="Light Mode"
+                    onClick={() => setDarkMode(false)}
+                    className="cursor-pointer text-2xl dark:text-gray-100"
+                  />
+                ) : (
+                  <BsFillMoonStarsFill
+                    title="Dark Mode"
+                    onClick={() => setDarkMode(true)}
+                    className="cursor-pointer text-2xl dark:text-gray-100"
+                  />
+                )}
               </li>
               <li>
-                <Link
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500  text-white px-4 py-2 rounded-md ml-8"
-                  href="#resume"
+                <a
+                  className="bg-gradient-to-r from-cyan-500 to-teal-500 shadow-lg shadow-cyan-500/50 text-white px-4 py-2 rounded-md ml-8 hover:bg-fuchsia-600"
+                  title="Download PDF copy of Resume"
+                  download
+                  href="/resume.pdf"
                 >
                   Resume
-                </Link>
+                </a>
               </li>
             </ul>
           </nav>
@@ -78,7 +90,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              <AiFillLinkedin className="hover:text-teal-500" />
+              <AiFillLinkedin className="hover:text-teal-500 transform transition duration-500 hover:scale-110" />
             </a>
           </div>
 
@@ -115,8 +127,9 @@ export default function Home() {
               the course of 6 months, I learned modern web development using{" "}
               <span className="text-teal-500">HTML5</span>,{" "}
               <span className="text-teal-500">CSS3</span>, client-side
-              programming with <span className="text-teal-500">JavaScript</span>
-              , <span className="text-teal-500">ReactJS</span>,{" "}
+              programming with{" "}
+              <span className="text-teal-500">JavaScript ES6</span>,{" "}
+              <span className="text-teal-500">ReactJS</span>,{" "}
               <span className="text-teal-500">Bootstrap</span>, and server-side
               programming with <span className="text-teal-500">NodeJS</span>,{" "}
               <span className="text-teal-500">Express.js</span>,{" "}
@@ -131,7 +144,7 @@ export default function Home() {
 
           {/* Cards */}
           <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-100">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-100 transform transition duration-500 hover:scale-110">
               <Image
                 src={design}
                 width={100}
@@ -151,7 +164,7 @@ export default function Home() {
               <p className="text-gray-800 py-1">TailwindCSS</p>
               <p className="text-gray-800 py-1">Bootstrap</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-100">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-100 transform transition duration-500 hover:scale-110">
               <Image
                 src={code}
                 width={100}
@@ -163,15 +176,15 @@ export default function Home() {
                 Functional Programs
               </h3>
               <p className="py-2">
-                Building web applications with a focus on functionality,
-                code readability, and reusability.
+                Building web applications with a focus on functionality, code
+                readability, and reusability.
               </p>
               <h4 className="py-4 text-teal-600">Languages I use</h4>
               <p className="text-gray-800 py-1">JavaScript</p>
               <p className="text-gray-800 py-1">HTML/CSS</p>
               <p className="text-gray-800 py-1">Python</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-100">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-100 transform transition duration-500 hover:scale-110">
               <Image
                 src={learn}
                 width={100}
@@ -209,52 +222,95 @@ export default function Home() {
 
           {/* Project Screencaps */}
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1 shadow-md rounded-lg">
-              <Image
-                src={movies}
-                alt=""
-                className="rounded-lg object-cover"
-                width={"100&"}
-                height={"100%"}
-                layout="responsive"
-              />
+            <div className="basis-1/3 flex-1 shadow-md rounded-lg transform transition duration-500 hover:scale-105">
+              <a
+                href="https://github.com/bobbyzto/WeLoveMovies"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src={movies}
+                  alt=""
+                  className="rounded-lg object-cover"
+                  width={"100&"}
+                  height={"100%"}
+                  layout="responsive"
+                />
+              </a>
             </div>
-            <div className="basis-1/3 flex-1 shadow-md rounded-lg">
-              <Image
-                src={reservations}
-                alt=""
-                className="rounded-lg object-cover"
-                width={"100&"}
-                height={"100%"}
-                layout="responsive"
-              />
+            <div className="basis-1/3 flex-1 shadow-md rounded-lg transform transition duration-500 hover:scale-105">
+              <a
+                href="https://github.com/bobbyzto/starter-restaurant-reservation"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src={reservations}
+                  alt=""
+                  className="rounded-lg object-cover"
+                  width={"100&"}
+                  height={"100%"}
+                  layout="responsive"
+                />
+              </a>
             </div>
-            <div className="basis-1/3 flex-1 shadow-md rounded-lg">
-              <Image
-                src={recipes}
-                alt=""
-                className="rounded-lg object-cover"
-                width={"100&"}
-                height={"100%"}
-                layout="responsive"
-              />
+            <div className="basis-1/3 flex-1 shadow-md rounded-lg transform transition duration-500 hover:scale-105">
+              <a
+                href="https://github.com/bobbyzto/recipe-book-app"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src={recipes}
+                  alt=""
+                  className="rounded-lg object-cover"
+                  width={"100&"}
+                  height={"100%"}
+                  layout="responsive"
+                />
+              </a>
             </div>
-            <div className="basis-1/3 flex-1 shadow-md rounded-lg">
-              <Image
-                src={library}
-                alt=""
-                className="rounded-lg object-cover"
-                width={"100&"}
-                height={"100%"}
-                layout="responsive"
-              />
+            <div className="basis-1/3 flex-1 shadow-md rounded-lg transform transition duration-500 hover:scale-105">
+              <a
+                href="https://github.com/bobbyzto/local-library-project"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src={library}
+                  alt=""
+                  className="rounded-lg object-cover"
+                  width={"100&"}
+                  height={"100%"}
+                  layout="responsive"
+                />
+              </a>
             </div>
           </div>
         </section>
 
-        <section id="resume">
-          <div>
-            <h3 className="text-3xl py-1 dark:text-gray-100">Resume</h3>
+        <section>
+          <div className="py-3 text-center">
+            <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+              <a
+                href="https://github.com/bobbyzto/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BsGithub className="transform transition duration-500 hover:scale-105 hover:text-teal-500" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/robertweche/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillLinkedin className="transform transition duration-500 hover:scale-105 hover:text-teal-500" />
+              </a>
+            </div>
+            <p className="text-sm mt-2 opacity-60 dark:text-gray-300">
+              &copy; {new Date().getFullYear()} Robert Weche. <br /> Built with
+              JavaScript, React, Next.js, and TailwindCSS.
+            </p>
           </div>
         </section>
       </main>
