@@ -62,7 +62,7 @@ export default function Home() {
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 shadow-lg shadow-cyan-500/50 text-white px-4 py-2 rounded-md ml-8 hover:bg-fuchsia-600"
                   title="Download PDF copy of Resume"
                   download
-                  href="/resume.pdf"
+                  href="/Resume_Robert_Weche.pdf"
                 >
                   Resume
                 </a>
