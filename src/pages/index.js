@@ -71,7 +71,7 @@ export default function Home() {
                 <a
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 shadow-lg shadow-cyan-500/50 text-white px-4 py-2 rounded-md ml-8 hover:bg-fuchsia-600"
                   title="View my Resume"
-                  href="/Resume_06-02-2023.pdf"
+                  href="/Robert_Weche_Resume.pdf"
                 >
                   Resume
                 </a>
